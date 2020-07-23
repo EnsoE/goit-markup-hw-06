@@ -40,7 +40,7 @@
         </ul>
         <!--Зворотній звязок-->
         <ul class="contact-list">
-          <li class="li-contact">
+          <li>
             <a class="link-contact" href="info@devstudio.com">
               <svg class="icon-envelope" width="16" height="11.2">
                 <use href="./img/sprite.svg#icon-envelope"></use>
@@ -48,7 +48,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="li-contact">
+          <li>
             <a class="link-contact" href="+380961111111">
               <svg class="icon-phone" width="10" hight="14.94">
                 <use href="./img/sprite.svg#icon-phone"></use>
@@ -62,7 +62,88 @@
       <!--Заголовок-->
       <div class="blok-title">
         <h1 class="hero-title">ЕФЕКТИВНІ РІШЕННЯ<br />ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-        <a class="button-primary" href=""> <centr> Замовити послугу</centr></a>
+        <button class="button-primary" data-modal-open>
+          <centr> Замовити послугу</centr>
+        </button>
+      </div>
+      <div class="backdrop is-hidden" data-modal>
+        <form class="modal">
+          <button class="ellipse-close" href="" data-modal-close>
+            <svg clas="icon-close" width="11" height="11">
+              <use href="./img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <h2 class="title-form">Залиште свої данні, ми вам зателефонуємо</h2>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder=" "
+            />
+            <label class="form-label" for="name">Ім'я</label>
+            <svg class="icon-form" width="13" hight="13">
+              <use href="./img/sprite.svg#icon-men"></use>
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder=" "
+            />
+            <label class="form-label" for="tel">Телефон</label>
+            <svg class="icon-form" width="15" hight="15">
+              <use href="./img/sprite.svg#icon-phone-form"></use>
+            </svg>
+          </div>
+
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+            />
+            <label class="form-label" for="email">Пошта</label>
+            <svg class="icon-form" width="15" hight="15">
+              <use href="./img/sprite.svg#icon-envelope-form"></use>
+            </svg>
+          </div>
+          <div class="form-textarea">
+            <textarea
+              name="coment"
+              id="text"
+              cols=""
+              rows="6"
+              placeholder="Коментарі"
+            ></textarea>
+          </div>
+
+          <div class="checkbox-div">
+            <label for="agree">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="agree"
+                value="agree"
+                id="agree"
+              />
+              <span class="icon-check"></span>
+              <span>Погоджуюсь з розсилкою і приймаю</span>
+              <a class="contract" href="">Умови договору</a>
+            </label>
+          </div>
+
+          <button class="button-primary" type="submit">Відправити</button>
+        </form>
       </div>
 
       <!--Переваги-->
@@ -157,8 +238,8 @@
               <p class="profession" lang="en">UI Designer</p>
               <ul class="list-icon">
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-instagram"></use>
                       </svg>
@@ -166,8 +247,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-twitter"></use>
                       </svg>
@@ -175,8 +256,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-facebook"></use>
                       </svg>
@@ -184,8 +265,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -205,8 +286,8 @@
               <p class="profession" lang="en">Marketing</p>
               <ul class="list-icon">
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-instagram"></use>
                       </svg>
@@ -214,8 +295,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-twitter"></use>
                       </svg>
@@ -223,8 +304,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-facebook"></use>
                       </svg>
@@ -232,8 +313,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -253,8 +334,8 @@
               <p class="profession" lang="en">Frontend Developer</p>
               <ul class="list-icon">
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-instagram"></use>
                       </svg>
@@ -262,8 +343,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-twitter"></use>
                       </svg>
@@ -271,8 +352,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-facebook"></use>
                       </svg>
@@ -280,8 +361,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -301,8 +382,8 @@
               <p class="profession" lang="en">Product Designer</p>
               <ul class="list-icon">
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-instagram"></use>
                       </svg>
@@ -310,8 +391,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-twitter"></use>
                       </svg>
@@ -319,8 +400,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-facebook"></use>
                       </svg>
@@ -328,8 +409,8 @@
                   </a>
                 </li>
                 <li>
-                  <a class="link-social" href="">
-                    <p class="li-soc-memb">
+                  <a href="">
+                    <p class="box-icon-social">
                       <svg class="icon-social">
                         <use href="./img/sprite.svg#icon-linkedin"></use>
                       </svg>
@@ -426,34 +507,42 @@
         <div class="appeals-box">
           <span class="appeals">ПРИЄДНУЙТЕСЬ</span>
           <ul class="footer-icon-list">
-            <a clas="link-social-footer" href="">
-              <li class="li-social-footer">
-                <svg class="icon-social-footer">
-                  <use href="./img/sprite.svg#icon-instagram"></use>
-                </svg>
-              </li>
-            </a>
-            <a clas="link-social-footer" href="">
-              <li class="li-social-footer">
-                <svg class="icon-social-footer">
-                  <use href="./img/sprite.svg#icon-twitter"></use>
-                </svg>
-              </li>
-            </a>
-            <a clas="link-social-footer" href="">
-              <li class="li-social-footer">
-                <svg class="icon-social-footer">
-                  <use href="./img/sprite.svg#icon-facebook"></use>
-                </svg>
-              </li>
-            </a>
-            <a clas="link-social-footer" href="">
-              <li class="li-social-footer">
-                <svg class="icon-social-footer">
-                  <use href="./img/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </li>
-            </a>
+            <li>
+              <a href="">
+                <p class="box-icon-footer">
+                  <svg class="icon-social-footer">
+                    <use href="./img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="box-icon-footer">
+                  <svg class="icon-social-footer">
+                    <use href="./img/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="box-icon-footer">
+                  <svg class="icon-social-footer">
+                    <use href="./img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="box-icon-footer">
+                  <svg class="icon-social-footer">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </p>
+              </a>
+            </li>
           </ul>
         </div>
         <!--Розсилка-->
@@ -463,14 +552,29 @@
             <input
               class="mail-input"
               type="email"
-              value="E-mail"
+              name="email"
+              id="email"
               placeholder="E-mail"
             />
-            <input class="button-footer" type="button" value="Підписатись" />
+            <button class="button-footer" type="submit">Підписатись</button>
           </form>
         </div>
       </div>
       <p class="developers" lang="en">2020 | Developed by GoIT Students</p>
     </footer>
+    <script>
+      (() => {
+          document
+            .querySelector('.modal')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(${ name }: ${ value }),
+              );
+              e.currentTarget.reset();
+            });
+        })();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
