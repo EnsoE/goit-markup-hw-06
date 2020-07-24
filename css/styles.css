@@ -120,13 +120,22 @@ html {
 .contact-list {
   margin-top: 32px;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   padding: 0px;
   margin-left: auto;
   margin-right: 0px;
-  list-style: none;
+  list-style: none; 
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
 }
 
 .link-contact {
+  display: flex;
+  align-items: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -145,8 +154,7 @@ html {
   display: inline-block;
   width: 13px;
   height: 18px;
-  position: relative;
-  top: 4px;
+ margin-right: 10px;
   --color1: currentColor;
 }
 
@@ -155,8 +163,7 @@ html {
   padding: 0;
   width: 20px;
   height: 14.2px;
-  position: relative;
-  top: 2px;
+margin-right: 10px;
   --color1: currentColor;
 }
 
@@ -244,6 +251,8 @@ border-radius: 4px;
 }
 
 
+/*Modal*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -287,6 +296,7 @@ border-radius: 4px;
 .ellipse-close:hover,
 .ellipse-close:focus {
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .ellipse-close {
@@ -332,7 +342,6 @@ border-radius: 4px;
 
 .form-field {
   position: relative;
-  height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -341,8 +350,8 @@ border-radius: 4px;
 
 .form-field input {
   border: none;
+  height: 40px;
   width: 100%;
-  height: 100%;
   padding: 0;
   margin: 0;
   padding-left: 42px;
@@ -352,7 +361,7 @@ border-radius: 4px;
   
 }
 
-.form-field label {
+.form-label-input {
   position: absolute;
   top: 50%;
   left: 42px;
@@ -370,15 +379,31 @@ border-radius: 4px;
 
 }
 
+.form-label-textarea {
+  position: absolute;
+  top: 18%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #757575;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
 textarea {
+  border: none;
   display: inline-block;
   resize: none;
-  width: 468px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  width: 100%;
   box-sizing: border-box;
-  border-radius: 4px;
-  background-size: 100%;
-  margin-bottom: 20px;
+  margin: 0;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -390,10 +415,16 @@ textarea {
 }
 
 
-.form-input:focus + .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-input:focus + .form-label-input,
+.form-input:not(:placeholder-shown) + .form-label-input {
   color: var(--accent-color);
   transform: translateX(-40px) translateY(-40px);
+}
+
+.form-input:focus + .form-label-textarea,
+.form-input:not(:placeholder-shown) + .form-label-textarea {
+  color: var(--accent-color);
+  transform: translateX(-17px) translateY(-42px);
 }
 
 .form-input:focus ~ .icon-form {

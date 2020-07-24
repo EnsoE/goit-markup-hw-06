@@ -40,7 +40,7 @@
         </ul>
         <!--Зворотній звязок-->
         <ul class="contact-list">
-          <li>
+          <li class="contact-item">
             <a class="link-contact" href="info@devstudio.com">
               <svg class="icon-envelope" width="16" height="11.2">
                 <use href="./img/sprite.svg#icon-envelope"></use>
@@ -48,7 +48,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contact-item">
             <a class="link-contact" href="+380961111111">
               <svg class="icon-phone" width="10" hight="14.94">
                 <use href="./img/sprite.svg#icon-phone"></use>
@@ -84,7 +84,7 @@
               id="name"
               placeholder=" "
             />
-            <label class="form-label" for="name">Ім'я</label>
+            <label class="form-label-input" for="name">Ім'я</label>
             <svg class="icon-form" width="13" hight="13">
               <use href="./img/sprite.svg#icon-men"></use>
             </svg>
@@ -98,7 +98,7 @@
               id="tel"
               placeholder=" "
             />
-            <label class="form-label" for="tel">Телефон</label>
+            <label class="form-label-input" for="tel">Телефон</label>
             <svg class="icon-form" width="15" hight="15">
               <use href="./img/sprite.svg#icon-phone-form"></use>
             </svg>
@@ -112,19 +112,21 @@
               id="email"
               placeholder=" "
             />
-            <label class="form-label" for="email">Пошта</label>
+            <label class="form-label-input" for="email">Пошта</label>
             <svg class="icon-form" width="15" hight="15">
               <use href="./img/sprite.svg#icon-envelope-form"></use>
             </svg>
           </div>
-          <div class="form-textarea">
+          <div class="form-field">
             <textarea
+              class="form-input"
               name="coment"
               id="text"
               cols=""
               rows="6"
-              placeholder="Коментарі"
+              placeholder=" "
             ></textarea>
+            <label class="form-label-textarea" for="text"> Коментарі</label>
           </div>
 
           <div class="checkbox-div">
